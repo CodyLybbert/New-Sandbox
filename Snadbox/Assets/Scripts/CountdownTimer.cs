@@ -15,7 +15,7 @@ public class CountdownTimer : MonoBehaviour
         currentTime = startTime;
     }
 
-    private void Update()
+    void Update()
     {
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
@@ -24,6 +24,8 @@ public class CountdownTimer : MonoBehaviour
             currentTime = 0;
         }
     }
+
+
 
 
 

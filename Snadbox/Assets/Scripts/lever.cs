@@ -6,18 +6,19 @@ public class lever : MonoBehaviour
 {
     HingeJoint hinge;
     [SerializeField]
+    AudioSource pull;
 
-    // Start is called before the first frame update
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //resets the score to zero and plays sound
         if (hinge.angle == hinge.limits.min)
         {
+            pull.Play();
             ScoreCount.score = 0;
         }
     }

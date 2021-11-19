@@ -12,6 +12,7 @@ public class ScoreCount : MonoBehaviour
     //[SerializeField]
     //GameObject minusBase;
 
+    //essentially, this script keeps track of the score
     void Update()
     {
         scoreboardScore.text = score.ToString();

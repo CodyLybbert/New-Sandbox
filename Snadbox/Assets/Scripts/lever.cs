@@ -6,7 +6,6 @@ public class lever : MonoBehaviour
 {
     HingeJoint hinge;
     [SerializeField]
-    GameObject bubbleGun;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,7 @@ public class lever : MonoBehaviour
     {
         if (hinge.angle == hinge.limits.min)
         {
-            bubbleGun.SetActive(true);
+            ScoreCount.score = 0;
         }
     }
 }

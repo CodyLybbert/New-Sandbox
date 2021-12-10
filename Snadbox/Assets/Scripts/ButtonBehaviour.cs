@@ -10,9 +10,15 @@ public class ButtonBehaviour : MonoBehaviour
     GameObject ballPrefab;
     [SerializeField]
     Transform launchPoint;
+
     //made a simple system where when the button is hit, it spawns the ball at the location of the launcher
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Instantiate(ballPrefab, launchPoint.position, Quaternion.identity);
+    //}
+    private void OnTriggerEnter(Collider other)
     {
         Instantiate(ballPrefab, launchPoint.position, Quaternion.identity);
+       
     }
 }
